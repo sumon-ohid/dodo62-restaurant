@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="min-h-screen bg-background font-sans antialiased flex justify-center">
-        <div className="relative flex min-h-screen flex-col w-full max-w-7xl">
+        <div className="relative flex min-h-screen flex-col w-full max-w-7xl border border-dashed border-gray-200">
           <Navbar />
           <main className="flex-1 flex items-center justify-center">
             {children}
