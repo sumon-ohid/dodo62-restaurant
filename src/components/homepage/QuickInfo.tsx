@@ -30,18 +30,6 @@ export default function QuickInfo() {
           🥢
         </motion.div>
       </div>
-      
-      <div className="absolute top-1/2 left-4 md:left-8 z-10">
-        <motion.div
-          className="text-sm md:text-base"
-          initial={{ scale: 0, rotate: 90 }}
-          whileInView={{ scale: 1, rotate: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          🌶️
-        </motion.div>
-      </div>
 
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -54,8 +42,9 @@ export default function QuickInfo() {
           >
             <Clock className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-black" />
             <h3 className="text-lg md:text-xl font-semibold mb-2 font-handwriting">Opening Hours</h3>
-            <p className="text-gray-600 text-sm md:text-base font-handwriting">Tue-Sun: 12:00 - 23:00</p>
-            <p className="text-gray-600 text-sm md:text-base font-handwriting">Closed on Mondays</p>
+            <p className="text-gray-600 text-sm md:text-base font-handwriting">Wed-Sun: 5:00 - 10:00 PM</p>
+            <p className="text-gray-600 text-sm md:text-base font-handwriting">Tue: 5:00 - 10:00 PM</p>
+            <p className="text-gray-600 text-sm md:text-base font-handwriting">Monday: Closed</p>
           </motion.div>
           <motion.div 
             className="text-center p-6 bg-gray-50 rounded-lg"
@@ -66,8 +55,8 @@ export default function QuickInfo() {
           >
             <MapPin className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-black" />
             <h3 className="text-lg md:text-xl font-semibold mb-2 font-handwriting">Location</h3>
-            <p className="text-gray-600 text-sm md:text-base font-handwriting">Vienna, Austria</p>
-            <p className="text-gray-600 text-sm md:text-base font-handwriting">City Center</p>
+            <p className="text-gray-600 text-sm md:text-base font-handwriting">Hebragasse 11</p>
+            <p className="text-gray-600 text-sm md:text-base font-handwriting">1090 Wien, Austria</p>
           </motion.div>
           <motion.div 
             className="text-center p-6 bg-gray-50 rounded-lg sm:col-span-2 lg:col-span-1"
@@ -78,8 +67,8 @@ export default function QuickInfo() {
           >
             <Phone className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-3 md:mb-4 text-black" />
             <h3 className="text-lg md:text-xl font-semibold mb-2 font-handwriting">Contact</h3>
-            <p className="text-gray-600 text-sm md:text-base font-handwriting">+43 1 234 567 890</p>
-            <p className="text-gray-600 text-sm md:text-base font-handwriting">info@dodo62.at</p>
+            <p className="text-gray-600 text-sm md:text-base font-handwriting">+43 664 3450615</p>
+            <p className="text-gray-600 text-sm md:text-base font-handwriting">hello@dodo62.com</p>
           </motion.div>
         </div>
       </div>

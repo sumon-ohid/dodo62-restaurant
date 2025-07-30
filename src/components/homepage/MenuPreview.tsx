@@ -43,11 +43,11 @@ const menuItems = [
 
 export default function MenuPreview() {
   return (
-    <section id="menu" className="py-20 relative">
+    <section id="menu" className="py-12 md:py-20 bg-gray-50 relative">
       {/* Notion-style doodles */}
-      <div className="absolute top-10 left-8 z-10">
+      <div className="absolute top-4 left-4 md:top-10 md:left-8 z-10">
         <motion.div
-          className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center text-lg"
+          className="text-lg md:text-xl"
           initial={{ scale: 0, rotate: -45 }}
           whileInView={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.6 }}
@@ -57,9 +57,9 @@ export default function MenuPreview() {
         </motion.div>
       </div>
       
-      <div className="absolute top-20 right-12 z-10">
+      <div className="absolute top-8 right-4 md:top-20 md:right-12 z-10">
         <motion.div
-          className="w-10 h-10 bg-orange-200 rounded-full flex items-center justify-center text-sm"
+          className="text-base md:text-lg"
           initial={{ scale: 0, rotate: 45 }}
           whileInView={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -69,9 +69,9 @@ export default function MenuPreview() {
         </motion.div>
       </div>
       
-      <div className="absolute bottom-20 left-16 z-10">
+      <div className="absolute bottom-8 left-4 md:bottom-20 md:left-16 z-10">
         <motion.div
-          className="w-14 h-14 bg-purple-200 rounded-full flex items-center justify-center text-lg"
+          className="text-lg md:text-xl"
           initial={{ scale: 0, rotate: -90 }}
           whileInView={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -83,20 +83,20 @@ export default function MenuPreview() {
 
       <div className="container mx-auto px-4">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Menu</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 font-handwriting">Our Menu</h2>
+          <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto font-handwriting">
             Discover our authentic Korean dishes, crafted with traditional recipes 
             and the finest ingredients. From spicy kimchi to tender bulgogi.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {menuItems.map((item, index) => (
             <motion.div
               key={item.name}
@@ -107,22 +107,22 @@ export default function MenuPreview() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className="bg-white rounded-lg shadow-sm border overflow-hidden group-hover:shadow-md transition-shadow">
-                <div className="h-48 bg-gray-200 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-red-400 to-orange-500"></div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group-hover:shadow-md transition-shadow">
+                <div className="h-32 md:h-48 bg-gray-200 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400"></div>
                 </div>
-                <div className="p-6">
+                <div className="p-4 md:p-6">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-xl font-semibold">{item.name}</h3>
-                    <span className="text-lg font-medium text-gray-600">€{item.price}</span>
+                    <h3 className="text-lg md:text-xl font-semibold font-handwriting">{item.name}</h3>
+                    <span className="text-base md:text-lg font-medium text-gray-600 font-handwriting">€{item.price}</span>
                   </div>
-                  <p className="text-gray-600 text-sm">{item.description}</p>
+                  <p className="text-gray-600 text-sm md:text-base font-handwriting">{item.description}</p>
                   {item.tags && (
                     <div className="flex flex-wrap gap-2 mt-3">
                       {item.tags.map((tag) => (
                         <span 
                           key={tag} 
-                          className="px-2 py-1 bg-red-50 text-red-600 text-xs rounded-full border border-red-100"
+                          className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-200 font-handwriting"
                         >
                           {tag}
                         </span>
@@ -136,7 +136,7 @@ export default function MenuPreview() {
         </div>
 
         <motion.div 
-          className="text-center mt-12"
+          className="text-center mt-8 md:mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -144,7 +144,7 @@ export default function MenuPreview() {
         >
           <a 
             href="#full-menu" 
-            className="inline-flex items-center px-6 py-3 border border-red-300 text-red-700 font-medium rounded-lg hover:bg-red-50 transition-colors"
+            className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors font-handwriting text-sm md:text-base"
           >
             View Full Menu
           </a>
