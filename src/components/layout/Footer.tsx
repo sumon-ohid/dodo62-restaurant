@@ -34,7 +34,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-6 md:py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
           <div>
-            <h3 className="text-lg font-semibold mb-3 md:mb-4 text-black font-handwriting">dodo62</h3>
+            <div className="flex items-center mb-3 md:mb-4">
+              <img 
+                src="/logo.png" 
+                alt="dodo62 logo" 
+                className="h-12 md:h-16 w-auto mr-4"
+              />
+            </div>
             <p className="text-sm text-gray-600 mb-3 md:mb-4 font-handwriting">
               Authentic Korean cuisine in the heart of Vienna. 
               Experience the flavors of Korea with every bite.

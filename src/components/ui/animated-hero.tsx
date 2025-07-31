@@ -22,7 +22,7 @@ function Hero() {
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <div className="w-full relative min-h-screen flex items-start lg:items-start justify-center overflow-hidden bg-white pt-8 lg:pt-16">
       {/* Notion-style doodles around headlines */}
       {/* <div className="absolute top-10 left-4 md:top-20 md:left-10 z-20">
         <motion.div
@@ -114,11 +114,24 @@ function Hero() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8">
-              <Button size="lg" className="gap-2 md:gap-4 bg-black hover:bg-gray-800 text-white font-handwriting text-sm md:text-base">
+              <Button 
+                size="lg" 
+                className="gap-2 md:gap-4 bg-black hover:bg-gray-800 text-white font-handwriting text-sm md:text-base"
+                onClick={() => window.open('tel:+436643450615', '_self')}
+              >
                 <PhoneCall className="w-3 h-3 md:w-4 md:h-4" />
                 Call us now
               </Button>
-              <Button size="lg" className="gap-2 md:gap-4 bg-gray-200 hover:bg-gray-300 text-black font-semibold border border-gray-300 font-handwriting text-sm md:text-base">
+              <Button 
+                size="lg" 
+                className="gap-2 md:gap-4 bg-gray-200 hover:bg-gray-300 text-black font-semibold border border-gray-300 font-handwriting text-sm md:text-base"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 Make Reservation
                 <MoveRight className="w-3 h-3 md:w-4 md:h-4" />
               </Button>
