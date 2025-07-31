@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ImageGrid() {
   return (
@@ -13,9 +14,11 @@ export default function ImageGrid() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative group"
           >
-            <img 
+            <Image 
               src="/assets/img-1.png" 
               alt="Korean cuisine image 1" 
+              width={400}
+              height={256}
               className="w-full h-48 md:h-64 object-cover rounded-lg border-2 border-dashed border-gray-300 group-hover:border-gray-400 transition-colors duration-300"
             />
           </motion.div>
@@ -26,9 +29,11 @@ export default function ImageGrid() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative group"
           >
-            <img 
+            <Image 
               src="/assets/img-2.png" 
               alt="Korean cuisine image 2" 
+              width={400}
+              height={256}
               className="w-full h-48 md:h-64 object-cover rounded-lg border-2 border-dashed border-gray-300 group-hover:border-gray-400 transition-colors duration-300"
             />
           </motion.div>
@@ -39,9 +44,11 @@ export default function ImageGrid() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="relative group"
           >
-            <img 
+            <Image 
               src="/assets/img-3.png" 
               alt="Korean cuisine image 3" 
+              width={400}
+              height={256}
               className="w-full h-48 md:h-64 object-cover rounded-lg border-2 border-dashed border-gray-300 group-hover:border-gray-400 transition-colors duration-300"
             />
           </motion.div>
@@ -52,9 +59,11 @@ export default function ImageGrid() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative group"
           >
-            <img 
+            <Image 
               src="/assets/img-4.png" 
               alt="Korean cuisine image 4" 
+              width={400}
+              height={256}
               className="w-full h-48 md:h-64 object-cover rounded-lg border-2 border-dashed border-gray-300 group-hover:border-gray-400 transition-colors duration-300"
             />
           </motion.div>

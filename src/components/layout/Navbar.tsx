@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,10 +18,12 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center space-x-2 ml-4 md:ml-12">
-          <a href="/" className="flex items-center space-x-2">
-            <img 
+          <Link href="/" className="flex items-center space-x-2">
+            <Image 
               src="/logo.png" 
               alt="dodo62 logo" 
+              width={64}
+              height={64}
               className="h-12 w-12 md:h-16 md:w-16"
             />
             <motion.span 
@@ -36,7 +40,7 @@ export default function Navbar() {
             >
               🇰🇷
             </motion.span>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation - Centered */}

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -35,9 +36,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
           <div>
             <div className="flex items-center mb-3 md:mb-4">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="dodo62 logo" 
+                width={64}
+                height={64}
                 className="h-12 md:h-16 w-auto mr-4"
               />
             </div>

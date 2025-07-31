@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight, PhoneCall, Utensils } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -145,9 +146,11 @@ function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative w-full max-w-sm md:max-w-md"
             >
-              <img 
+              <Image 
                 src="/assets/hero.png" 
                 alt="Korean cuisine at dodo62" 
+                width={500}
+                height={400}
                 className="w-full h-auto rounded-lg"
               />
             </motion.div>
